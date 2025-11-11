@@ -56,49 +56,49 @@ class Obstacles(Entity):
 
     def remove_old_obstacles(self):
         # remove first obstacle if its out of the screen
-        for pipe in self.upper:
-            if pipe.x < -pipe.w:
-                self.upper.remove(pipe)
+        for obstacle in self.upper:
+            if obstacle.x < -obstacle.w:
+                self.upper.remove(obstacle)
 
-        for pipe in self.lower:
-            if pipe.x < -pipe.w:
-                self.lower.remove(pipe)
+        for obstacle in self.lower:
+            if obstacle.x < -obstacle.w:
+                self.lower.remove(obstacle)
 
-    def spawn_initial_pipes(self):
-        upper_1, lower_1 = self.make_random_pipes()
+    def spawn_initial_obstacles(self):
+        upper_1, lower_1 = self.make_random_obstacles()
         upper_1.x = self.config.window.width + upper_1.w * 3
         lower_1.x = self.config.window.width + upper_1.w * 3
         self.upper.append(upper_1)
         self.lower.append(lower_1)
 
-        upper_2, lower_2 = self.make_random_pipes()
+        upper_2, lower_2 = self.make_random_obstacles()
         upper_2.x = upper_1.x + upper_1.w * 3.5
         lower_2.x = upper_1.x + upper_1.w * 3.5
         self.upper.append(upper_2)
         self.lower.append(lower_2)
 
-    def make_random_pipes(self):
-        """returns a randomly generated pipe"""
-        # y of gap between upper and lower pipe
+    def make_random_obstacles(self):
+        """returns a randomly generated obstacle"""
+        # y of gap between upper and lower obstacle
         base_y = self.config.window.viewport_height
 
         gap_y = random.randrange(0, int(base_y * 0.6 - self.pipe_gap))
         gap_y += int(base_y * 0.2)
-        pipe_height = self.config.images.pipe[0].get_height()
-        pipe_x = self.config.window.width + 10
+        obstacle_height = self.config.images.pipe[0].get_height()
+        obstacle_x = self.config.window.width + 10
 
-        upper_pipe = Pipe(
+        upper_obstacle = Obstacle(
             self.config,
             self.config.images.pipe[0],
-            pipe_x,
-            gap_y - pipe_height,
+            obstacle_x,
+            gap_y - obstacle_height,
         )
 
-        lower_pipe = Pipe(
+        lower_obstacle = Obstacle(
             self.config,
             self.config.images.pipe[1],
-            pipe_x,
+            obstacle_x,
             gap_y + self.pipe_gap,
         )
 
-        return upper_pipe, lower_pipe
+        return upper_obstacle, lower_obstacle
