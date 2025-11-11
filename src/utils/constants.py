@@ -33,8 +33,13 @@ OCEAN_BACKGROUNDS = (
 # Keep original for backward compatibility
 BACKGROUNDS = OCEAN_BACKGROUNDS
 
-# list of pipes
-PIPES = (
-    "assets/sprites/pipe-green.png",
-    "assets/sprites/pipe-red.png",
+# list of underwater obstacles
+OBSTACLES = (
+    "assets/sprites/obstacles/coral-pink-top.png",
+    "assets/sprites/obstacles/rocks-gray-top.png",
+    "assets/sprites/obstacles/rocks-basalt-top.png",
+    "assets/sprites/obstacles/coral-brain-top.png",
 )
+
+# Keep original for backward compatibility
+PIPES = OBSTACLES
