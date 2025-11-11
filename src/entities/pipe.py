@@ -104,6 +104,22 @@ class Obstacles(Entity):
         return upper_obstacle, lower_obstacle
 
 
+def can_spawn_pipes(self) -> bool:
+        return self.can_spawn_obstacles()
+
+    def spawn_new_pipes(self):
+        self.spawn_new_obstacles()
+
+    def remove_old_pipes(self):
+        self.remove_old_obstacles()
+
+    def spawn_initial_pipes(self):
+        self.spawn_initial_obstacles()
+
+    def make_random_pipes(self):
+        return self.make_random_obstacles()
+
+
 # Backward compatibility aliases
 Pipe = Obstacle
 Pipes = Obstacles
