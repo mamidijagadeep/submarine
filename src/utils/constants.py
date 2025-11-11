@@ -33,13 +33,22 @@ OCEAN_BACKGROUNDS = (
 # Keep original for backward compatibility
 BACKGROUNDS = OCEAN_BACKGROUNDS
 
-# list of underwater obstacles
-OBSTACLES = (
+# list of underwater obstacles (top sprites)
+OBSTACLES_TOP = (
     "assets/sprites/obstacles/coral-pink-top.png",
     "assets/sprites/obstacles/rocks-gray-top.png",
     "assets/sprites/obstacles/rocks-basalt-top.png",
     "assets/sprites/obstacles/coral-brain-top.png",
 )
 
+# list of underwater obstacles (bottom sprites)
+OBSTACLES_BOTTOM = (
+    "assets/sprites/obstacles/coral-pink-bottom.png",
+    "assets/sprites/obstacles/rocks-gray-bottom.png",
+    "assets/sprites/obstacles/rocks-basalt-bottom.png",
+    "assets/sprites/obstacles/coral-brain-bottom.png",
+)
+
 # Keep original for backward compatibility
-PIPES = OBSTACLES
+OBSTACLES = OBSTACLES_TOP
+PIPES = OBSTACLES_TOP
