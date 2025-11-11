@@ -23,11 +23,15 @@ SUBMARINES = (
 # Keep original for backward compatibility
 PLAYERS = SUBMARINES
 
-# list of backgrounds
-BACKGROUNDS = (
-    "assets/sprites/background-day.png",
-    "assets/sprites/background-night.png",
+# list of ocean backgrounds
+OCEAN_BACKGROUNDS = (
+    "assets/sprites/backgrounds/ocean-shallow.png",
+    "assets/sprites/backgrounds/ocean-medium.png",
+    "assets/sprites/backgrounds/ocean-deep.png",
 )
+
+# Keep original for backward compatibility
+BACKGROUNDS = OCEAN_BACKGROUNDS
 
 # list of pipes
 PIPES = (
