@@ -145,9 +145,9 @@ class Player(Entity):
         return pipe.cx <= self.cx < pipe.cx - pipe.vel_x
 
     def collided(self, pipes: Pipes, floor: Floor) -> bool:
-        """returns True if player collides with floor or pipes."""
+        """returns True if submarine collides with floor or obstacles."""
 
-        # if player crashes into ground
+        # if submarine crashes into ocean floor
         if self.collide(floor):
             self.crashed = True
             self.crash_entity = "floor"
