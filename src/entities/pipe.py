@@ -103,8 +103,8 @@ class Obstacles(Entity):
 
         return upper_obstacle, lower_obstacle
 
-
-def can_spawn_pipes(self) -> bool:
+    # Backward compatibility methods
+    def can_spawn_pipes(self) -> bool:
         return self.can_spawn_obstacles()
 
     def spawn_new_pipes(self):
