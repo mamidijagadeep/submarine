@@ -69,8 +69,8 @@ class Player(Entity):
         self.rot_min = 0  # player's min rotation angle
         self.rot_max = 0  # player's max rotation angle
 
-        self.flap_acc = 0  # players speed on flapping
-        self.flapped = False  # True when player flaps
+        self.flap_acc = 0  # submarine's speed on ascending
+        self.flapped = False  # True when submarine ascends
 
     def reset_vals_crash(self) -> None:
         self.acc_y = 2
