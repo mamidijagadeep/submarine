@@ -5,7 +5,7 @@ from ..utils import GameConfig
 from .entity import Entity
 
 
-class Pipe(Entity):
+class Obstacle(Entity):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.vel_x = -5
@@ -15,9 +15,9 @@ class Pipe(Entity):
         super().draw()
 
 
-class Pipes(Entity):
-    upper: List[Pipe]
-    lower: List[Pipe]
+class Obstacles(Entity):
+    upper: List[Obstacle]
+    lower: List[Obstacle]
 
     def __init__(self, config: GameConfig) -> None:
         super().__init__(config)
