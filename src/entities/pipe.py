@@ -38,24 +38,24 @@ class Obstacles(Entity):
             low_pipe.tick()
 
     def stop(self) -> None:
-        for pipe in self.upper + self.lower:
-            pipe.vel_x = 0
+        for obstacle in self.upper + self.lower:
+            obstacle.vel_x = 0
 
-    def can_spawn_pipes(self) -> bool:
+    def can_spawn_obstacles(self) -> bool:
         last = self.upper[-1]
         if not last:
             return True
 
         return self.config.window.width - (last.x + last.w) > last.w * 2.5
 
-    def spawn_new_pipes(self):
-        # add new pipe when first pipe is about to touch left of screen
-        upper, lower = self.make_random_pipes()
+    def spawn_new_obstacles(self):
+        # add new obstacle when first obstacle is about to touch left of screen
+        upper, lower = self.make_random_obstacles()
         self.upper.append(upper)
         self.lower.append(lower)
 
-    def remove_old_pipes(self):
-        # remove first pipe if its out of the screen
+    def remove_old_obstacles(self):
+        # remove first obstacle if its out of the screen
         for pipe in self.upper:
             if pipe.x < -pipe.w:
                 self.upper.remove(pipe)
