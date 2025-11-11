@@ -104,7 +104,7 @@ class Player(Entity):
     def tick_crash(self) -> None:
         if self.min_y <= self.y <= self.max_y:
             self.y = clamp(self.y + self.vel_y, self.min_y, self.max_y)
-            # rotate only when it's a pipe crash and bird is still falling
+            # rotate only when it's a obstacle crash and submarine is still falling
             if self.crash_entity != "floor":
                 self.rotate()
 
