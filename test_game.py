@@ -14,7 +14,10 @@ try:
     # Test importing pygame
     import pygame
     pygame.init()
-    print("✓ Pygame imported successfully")
+
+    # Set a dummy video mode to avoid errors
+    pygame.display.set_mode((1, 1))
+    print("✓ Pygame initialized successfully")
 
     # Test importing game modules
     sys.path.append('src')
