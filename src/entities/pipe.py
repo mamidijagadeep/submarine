@@ -102,3 +102,8 @@ class Obstacles(Entity):
         )
 
         return upper_obstacle, lower_obstacle
+
+
+# Backward compatibility aliases
+Pipe = Obstacle
+Pipes = Obstacles
