@@ -1,24 +1,27 @@
-# list of all possible players (tuple of 3 positions of flap)
-PLAYERS = (
-    # red bird
+# list of all possible submarines (tuple of 3 animation states)
+SUBMARINES = (
+    # red submarine
     (
-        "assets/sprites/redbird-upflap.png",
-        "assets/sprites/redbird-midflap.png",
-        "assets/sprites/redbird-downflap.png",
+        "assets/sprites/submarine/red-up.png",
+        "assets/sprites/submarine/red-mid.png",
+        "assets/sprites/submarine/red-down.png",
     ),
-    # blue bird
+    # blue submarine
     (
-        "assets/sprites/bluebird-upflap.png",
-        "assets/sprites/bluebird-midflap.png",
-        "assets/sprites/bluebird-downflap.png",
+        "assets/sprites/submarine/blue-up.png",
+        "assets/sprites/submarine/blue-mid.png",
+        "assets/sprites/submarine/blue-down.png",
     ),
-    # yellow bird
+    # yellow submarine
     (
-        "assets/sprites/yellowbird-upflap.png",
-        "assets/sprites/yellowbird-midflap.png",
-        "assets/sprites/yellowbird-downflap.png",
+        "assets/sprites/submarine/yellow-up.png",
+        "assets/sprites/submarine/yellow-mid.png",
+        "assets/sprites/submarine/yellow-down.png",
     ),
 )
+
+# Keep original for backward compatibility
+PLAYERS = SUBMARINES
 
 # list of backgrounds
 BACKGROUNDS = (
