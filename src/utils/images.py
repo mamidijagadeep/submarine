@@ -3,7 +3,7 @@ from typing import List, Tuple
 
 import pygame
 
-from .constants import BACKGROUNDS, PIPES, PLAYERS
+from .constants import BACKGROUNDS, PIPES, PLAYERS, OBSTACLES_TOP, OBSTACLES_BOTTOM
 
 
 class Images:
