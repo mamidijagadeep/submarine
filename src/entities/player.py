@@ -38,7 +38,7 @@ class Player(Entity):
         elif mode == PlayerMode.SHM:
             self.reset_vals_shm()
         elif mode == PlayerMode.CRASH:
-            self.stop_wings()
+            self.stop_propeller()
             self.config.sounds.hit.play()
             if self.crash_entity == "pipe":
                 self.config.sounds.die.play()
