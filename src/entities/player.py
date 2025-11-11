@@ -131,7 +131,7 @@ class Player(Entity):
         rotated_rect = rotated_image.get_rect(center=self.rect.center)
         self.config.screen.blit(rotated_image, rotated_rect)
 
-    def stop_wings(self) -> None:
+    def stop_propeller(self) -> None:
         self.img_gen = cycle([self.img_idx])
 
     def flap(self) -> None:
