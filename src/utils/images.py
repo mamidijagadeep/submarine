@@ -40,8 +40,8 @@ class Images:
         rand_bg = random.randint(0, len(BACKGROUNDS) - 1)
         # select random player sprites
         rand_player = random.randint(0, len(PLAYERS) - 1)
-        # select random pipe sprites
-        rand_pipe = random.randint(0, len(PIPES) - 1)
+        # select random obstacle sprites
+        rand_obstacle = random.randint(0, len(OBSTACLES_TOP) - 1)
 
         self.background = pygame.image.load(BACKGROUNDS[rand_bg]).convert()
         self.player = (
@@ -49,11 +49,8 @@ class Images:
             pygame.image.load(PLAYERS[rand_player][1]).convert_alpha(),
             pygame.image.load(PLAYERS[rand_player][2]).convert_alpha(),
         )
+        # Use separate top and bottom sprites for obstacles
         self.pipe = (
-            pygame.transform.flip(
-                pygame.image.load(PIPES[rand_pipe]).convert_alpha(),
-                False,
-                True,
-            ),
-            pygame.image.load(PIPES[rand_pipe]).convert_alpha(),
+            pygame.image.load(OBSTACLES_TOP[rand_obstacle]).convert_alpha(),
+            pygame.image.load(OBSTACLES_BOTTOM[rand_obstacle]).convert_alpha(),
         )
